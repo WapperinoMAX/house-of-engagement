@@ -13,6 +13,13 @@ main {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  main {
+    padding: 0;
+    /* Let pages control their own padding on mobile */
+  }
+}
+
 main section {
   margin-bottom: 15vh;
 }

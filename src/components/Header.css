@@ -209,12 +209,14 @@
 
 @media (max-width: 1000px) {
     .header {
-        padding: var(--spacing-sm) 5%;
+        padding: var(--spacing-sm) 1.5rem;
         height: 70px;
+        /* Even tighter header */
     }
 
     .logo {
-        height: 45px;
+        height: 40px;
+        /* Small logo */
     }
 
     .hamburger {
