@@ -344,7 +344,7 @@
 
     .hero-title {
         /* Agrandir Wide is very wide, so we need a smaller unit */
-        font-size: 10vw;
+        font-size: 13vw;
         line-height: 0.95;
         letter-spacing: -0.02em;
         width: 100%;
