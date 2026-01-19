@@ -97,21 +97,90 @@
 }
 
 @media (max-width: 1024px) {
+    .talents-container {
+        padding: var(--spacing-md) 5%;
+    }
+
+    .talents-hero {
+        margin-bottom: var(--spacing-lg);
+    }
+
     .talents-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 768px) {
+    .talents-title {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .talents-description {
+        font-size: 0.95rem;
+        max-width: 100%;
+        padding: 0 var(--spacing-sm);
+    }
+
+    .talent-card {
+        border-radius: 20px;
+    }
+
+    .talent-name {
+        font-size: 1.3rem;
+        bottom: 20px;
+        right: 20px;
     }
 }
 
 @media (max-width: 600px) {
-    .talents-grid {
-        grid-template-columns: 1fr;
+    .talents-container {
+        padding: var(--spacing-sm) 5%;
     }
 
-    .talent-card {
-        height: 400px;
+    .talents-hero {
+        margin-bottom: var(--spacing-md);
     }
 
     .talents-title {
-        font-size: 3.5rem;
+        font-size: clamp(1.75rem, 12vw, 2.5rem);
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .talents-description {
+        font-size: 0.9rem;
+    }
+
+    .talents-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+        margin-top: var(--spacing-md);
+    }
+
+    .talent-card {
+        aspect-ratio: 3/4;
+        max-height: 450px;
+        border-radius: 20px;
+    }
+
+    .talent-name {
+        font-size: 1.2rem;
+        bottom: 15px;
+        right: 15px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .talents-title {
+        font-size: clamp(1.5rem, 12vw, 2rem);
+    }
+
+    .talent-card {
+        max-height: 400px;
+    }
+
+    .talent-name {
+        font-size: 1.1rem;
     }
 }

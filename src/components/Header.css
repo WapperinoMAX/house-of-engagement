@@ -188,14 +188,33 @@
     transform: translateY(-9px) rotate(-45deg);
 }
 
+@media (max-width: 1200px) {
+    .nav-link {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.75rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.6rem 0.6rem 1.5rem;
+        gap: 1rem;
+    }
+
+    .arrow {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+}
+
 @media (max-width: 1000px) {
     .header {
         padding: var(--spacing-sm) 5%;
-        height: 80px;
+        height: 70px;
     }
 
     .logo {
-        height: 50px;
+        height: 45px;
     }
 
     .hamburger {
@@ -218,6 +237,7 @@
         border-radius: 0;
         backdrop-filter: none;
         box-shadow: none;
+        gap: 1rem;
     }
 
     .nav.mobile-visible {
@@ -225,7 +245,7 @@
     }
 
     .nav-link {
-        font-size: 2rem;
+        font-size: 1.8rem;
         padding: 1rem 0;
         width: 100%;
         text-align: left;
@@ -241,6 +261,25 @@
 
     .cta-button {
         display: none;
-        /* Hide main CTA on mobile header, can move to menu later */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: 60px;
+        padding: var(--spacing-xs) 5%;
+    }
+
+    .logo {
+        height: 35px;
+    }
+
+    .nav {
+        padding: 80px 5% 30px;
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+        padding: 0.8rem 0;
     }
 }

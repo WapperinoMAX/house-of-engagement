@@ -158,21 +158,50 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 900px) {
-    .lets-engage-container {
-        padding: 40px 5%;
-    }
-
+@media (max-width: 1024px) {
     .engage-card {
-        grid-template-columns: 1fr;
-        padding: 3rem 1.5rem;
-        border-radius: 40px;
+        padding: 4rem;
         gap: 3rem;
     }
 
     .lets-engage-title {
-        font-size: clamp(2.5rem, 12vw, 60px);
+        font-size: clamp(3rem, 8vw, 80px);
+    }
+
+    .contact-intro {
+        font-size: 1.3rem;
+    }
+
+    .contact-details {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .lets-engage-container {
+        padding: var(--spacing-md) 5%;
+        min-height: auto;
+    }
+
+    .engage-card {
+        grid-template-columns: 1fr;
+        padding: 3rem 2rem;
+        border-radius: 40px;
+        gap: 2.5rem;
+    }
+
+    .engage-left {
+        gap: 1.5rem;
+    }
+
+    .lets-engage-title {
+        font-size: clamp(2.5rem, 10vw, 4rem);
         text-align: center;
+        line-height: 0.9;
+    }
+
+    .contact-intro {
+        font-size: 1.2rem;
     }
 
     .contact-intro,
@@ -181,11 +210,108 @@
         align-items: center;
     }
 
+    .contact-details {
+        font-size: 1.05rem;
+    }
+
     .contact-link {
         align-self: center;
     }
 
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.95rem;
+        padding: 0.9rem 1.1rem;
+    }
+
     .submit-button {
         padding: 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .lets-engage-container {
+        padding: var(--spacing-sm) 5%;
+    }
+
+    .engage-card {
+        padding: 2rem 1.5rem;
+        border-radius: 30px;
+        gap: 2rem;
+    }
+
+    .engage-left {
+        gap: 1.25rem;
+    }
+
+    .lets-engage-title {
+        font-size: clamp(2rem, 12vw, 3rem);
+        line-height: 0.95;
+    }
+
+    .contact-intro {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .contact-details {
+        font-size: 0.95rem;
+        gap: 0.4rem;
+    }
+
+    .engage-form {
+        gap: 1.25rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+        padding: 0.85rem 1rem;
+        border-radius: 10px;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        font-size: 0.8rem;
+    }
+
+    .submit-button {
+        padding: 0.9rem;
+        font-size: 0.95rem;
+        border-radius: 10px;
+        gap: 0.75rem;
+        margin-top: 0.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .engage-card {
+        padding: 1.5rem 1.25rem;
+        border-radius: 25px;
+        gap: 1.5rem;
+    }
+
+    .lets-engage-title {
+        font-size: clamp(1.75rem, 12vw, 2.5rem);
+    }
+
+    .contact-intro {
+        font-size: 0.9rem;
+    }
+
+    .contact-details {
+        font-size: 0.85rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.85rem;
+        padding: 0.75rem 0.9rem;
+    }
+
+    .submit-button {
+        padding: 0.85rem;
+        font-size: 0.9rem;
     }
 }
