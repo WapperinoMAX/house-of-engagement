@@ -1,0 +1,191 @@
+.lets-engage-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-lg) 5%;
+}
+
+.engage-card {
+    background-color: var(--color-salmon);
+    width: 100%;
+    border-radius: 60px;
+    padding: 5rem;
+    /* More breathing room */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    /* Center vertically */
+    box-shadow: 0 40px 80px rgba(114, 45, 38, 0.25);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* LEFT SIDE */
+.engage-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.lets-engage-title {
+    font-family: var(--font-headline);
+    font-size: clamp(3.5rem, 8vw, 110px);
+    /* Bigger, bolder */
+    line-height: 0.85;
+    color: var(--color-dark-red);
+    font-weight: 800;
+    /* Max weight */
+    letter-spacing: -0.03em;
+}
+
+.contact-intro {
+    font-family: var(--font-headline);
+    /* Maybe consistent with other subheads */
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.contact-details {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    color: black;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.contact-link {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    align-self: flex-start;
+    transition: all 0.3s;
+}
+
+.contact-link:hover {
+    border-bottom-color: var(--color-dark-red);
+    background-color: rgba(114, 45, 38, 0.1);
+}
+
+/* RIGHT SIDE (FORM) */
+.engage-right {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Subtle glass effect container? Or just clean? */
+    /* Let's keep it clean without background or minimal */
+    padding: 0;
+}
+
+.engage-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+    /* More balanced padding */
+    background-color: var(--color-white);
+    border: 2px solid transparent;
+    /* Prepare for focus state */
+    border-radius: 12px;
+    /* Sharper, cleaner look */
+    color: black;
+    /* Brand color text */
+    transition: all 0.3s ease;
+    font-weight: 500;
+    resize: vertical;
+    /* Textarea resize control */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #cc8e8e;
+    /* Muted salmon color for placeholder */
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(114, 45, 38, 0.1);
+    border-color: rgba(114, 45, 38, 0.1);
+}
+
+.submit-button {
+    background-color: var(--color-dark-red);
+    color: black;
+    font-family: var(--font-headline);
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    /* Matching the inputs */
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.submit-button:hover {
+    background-color: var(--color-lime);
+    /* Pop of color! */
+    color: black;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 900px) {
+    .lets-engage-container {
+        padding: 40px 5%;
+    }
+
+    .engage-card {
+        grid-template-columns: 1fr;
+        padding: 3rem 1.5rem;
+        border-radius: 40px;
+        gap: 3rem;
+    }
+
+    .lets-engage-title {
+        font-size: clamp(2.5rem, 12vw, 60px);
+        text-align: center;
+    }
+
+    .contact-intro,
+    .contact-details {
+        text-align: center;
+        align-items: center;
+    }
+
+    .contact-link {
+        align-self: center;
+    }
+
+    .submit-button {
+        padding: 1rem;
+    }
+}

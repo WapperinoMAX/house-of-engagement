@@ -1,0 +1,117 @@
+.talents-container {
+    padding: var(--spacing-lg) 5%;
+    text-align: center;
+}
+
+.talents-hero {
+    margin-bottom: var(--spacing-xl);
+}
+
+.talents-title {
+    font-family: var(--font-headline);
+    font-size: clamp(2.5rem, 7vw, 90px);
+    /* Reduced size */
+    color: var(--color-dark-red);
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+}
+
+.talents-description {
+    font-family: var(--font-body);
+    color: var(--color-text-primary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.talents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.talent-card {
+    position: relative;
+    aspect-ratio: 3/4;
+    /* Creating vertical cards */
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: var(--color-background-white);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow-card);
+}
+
+.talent-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 40px 80px -12px rgba(0, 0, 0, 0.3);
+    /* Stronger shadow on hover */
+}
+
+.talent-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.talent-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.talent-card:hover .talent-image {
+    transform: scale(1.03);
+}
+
+.talent-name {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    font-family: var(--font-headline);
+    font-weight: 800;
+    font-size: 1.5rem;
+    /* Reduced from 2rem */
+    color: var(--color-lime);
+    text-transform: uppercase;
+    font-style: italic;
+    /* Matching the nav style for consistency */
+    line-height: 1;
+    z-index: 2;
+    width: 100%;
+    text-align: right;
+    padding-right: 15px;
+    letter-spacing: -0.02em;
+}
+
+@media (max-width: 1024px) {
+    .talents-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .talents-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .talent-card {
+        height: 400px;
+    }
+
+    .talents-title {
+        font-size: 3.5rem;
+    }
+}

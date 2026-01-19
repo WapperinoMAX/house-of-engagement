@@ -1,0 +1,19 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: var(--spacing-lg);
+  max-width: 1600px;
+  /* Max width for large screens */
+  margin: 0 auto;
+  width: 100%;
+}
+
+main section {
+  margin-bottom: 15vh;
+  /* Significant spacing between sections */
+}

@@ -1,0 +1,246 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 5%;
+    /* Reduced horizontal padding */
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    height: 100px;
+    /* Reduced height to tighten space */
+}
+
+.logo-container {
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.logo {
+    height: 80px;
+    /* Reduced logo size for tighter header */
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Centered Navigation Pill */
+.nav {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.nav-link {
+    padding: 0.8rem 2rem;
+    border-radius: 40px;
+    font-family: var(--font-headline);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-style: italic;
+    /* Matching the slanted/bold look of reference */
+    color: var(--color-text-primary);
+    opacity: 0.5;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+.nav-link.active {
+    background-color: white;
+    color: var(--color-dark-red);
+    opacity: 1;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Right Side Grouping */
+/* Since we don't have a wrapper yet, we rely on flex behavior if nav is absolute. 
+   The elements after nav are CTA and Love Icon. 
+   We need to push them to the right. 
+   Wait, if Nav is absolute, the flow is Logo -> CTA -> Love.
+   We can just push CTA to margin-left: auto.
+*/
+
+.cta-button {
+    position: absolute;
+    top: var(--spacing-md);
+    right: 5%;
+    background-color: black;
+    color: white;
+    padding: 0.75rem 0.75rem 0.75rem 2rem;
+    /* Better balanced padding */
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-headline);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    /* More space between text and arrow */
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    text-transform: none;
+    /* Reference image says "Let's engage", not UPPERCASE */
+    letter-spacing: 0.02em;
+    z-index: 10;
+    height: fit-content;
+    /* Ensure proper height */
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+    display: flex;
+    /* Use flex for perfect centering */
+    align-items: center;
+    justify-content: center;
+    background: var(--color-lime);
+    /* neon background */
+    color: black;
+    /* dark arrow */
+    border-radius: 50%;
+    width: 32px;
+    /* Slightly larger circle */
+    height: 32px;
+    font-size: 1rem;
+    /* Adjust arrow size */
+    transition: transform 0.2s;
+}
+
+.cta-button:hover .arrow {
+    transform: translateX(3px);
+}
+
+/* The Love Icon (Red square with heart) */
+.love-icon {
+    background-color: var(--color-salmon);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    /* Softer rect */
+    margin-left: 1rem;
+    box-shadow: 0 10px 20px rgba(239, 129, 130, 0.3);
+    transform: rotate(0deg);
+    /* Remove tilt for cleaner look */
+    z-index: 10;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.love-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 20;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-dark-red);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 1000px) {
+    .header {
+        padding: var(--spacing-sm) 5%;
+        height: 80px;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-background-primary);
+        padding: 100px 5% 40px;
+        transform: translateY(-100%);
+        transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        z-index: 15;
+        border-radius: 0;
+        backdrop-filter: none;
+        box-shadow: none;
+    }
+
+    .nav.mobile-visible {
+        transform: translateY(0);
+    }
+
+    .nav-link {
+        font-size: 2rem;
+        padding: 1rem 0;
+        width: 100%;
+        text-align: left;
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    .nav-link.active {
+        background: none;
+        box-shadow: none;
+        color: var(--color-salmon);
+    }
+
+    .cta-button {
+        display: none;
+        /* Hide main CTA on mobile header, can move to menu later */
+    }
+}

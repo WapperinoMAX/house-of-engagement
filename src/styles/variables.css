@@ -1,0 +1,36 @@
+:root {
+  /* Brand Colors */
+  --color-dark-red: #722d26;
+  --color-medium-brown: #a15652;
+  --color-salmon: #ef8182;
+  --color-lime: #d6ed3f;
+  --color-light-grey: #dbdada;
+  --color-white: #fefefe;
+
+  /* Text & Background */
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-background-primary: var(--color-light-grey);
+  /* Based on design background */
+  --color-background-white: #ffffff;
+
+  /* Fonts */
+  --font-headline: 'Agrandir Wide', 'Unbounded', sans-serif;
+  --font-body: 'Telegraf', 'Space Grotesk', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+
+  /* Breakpoints */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+
+  /* Shadows */
+  --shadow-card: 0 30px 60px -10px rgba(0, 0, 0, 0.2), 0 18px 36px -18px rgba(0, 0, 0, 0.25);
+}

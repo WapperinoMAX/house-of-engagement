@@ -1,0 +1,51 @@
+@import './styles/variables.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Agrandir Wide';
+  src: url('/src/assets/fonts/Agrandir Wide Black.ttf') format('truetype');
+  font-weight: 500;
+  /* It is a 'Black' weight, but mapped to 500 as requested */
+  font-style: normal;
+  font-display: swap;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background-primary);
+  color: var(--color-dark-red);
+  /* Main text color seems to be the dark red based on "FROM TALENT TO IMPACT" */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-headline);
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 0.9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+}
