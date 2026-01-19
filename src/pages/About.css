@@ -297,7 +297,6 @@
         height: auto;
         min-height: 400px;
         display: block;
-        order: -1;
         margin-bottom: 2rem;
         margin-top: 0;
     }
@@ -385,6 +384,8 @@
         left: -1rem;
         /* Slight bleed to counteract padding for full bleed feel if wanted, or keep 0 */
         width: calc(100% + 2rem);
+        order: initial;
+        /* Ensure no inherited order messes this up */
     }
 
     .vertical-card {
