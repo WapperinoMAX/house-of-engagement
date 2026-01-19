@@ -343,11 +343,11 @@
 
     .hero-title {
         /* Agrandir Wide is very wide, so we need a smaller unit */
-        font-size: 17vw;
-        line-height: 0.95;
-        letter-spacing: -0.02em;
+        font-size: 21vw;
+        line-height: 0.85;
+        letter-spacing: -0.04em;
         width: 100%;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
         /* More space below title */
         word-wrap: break-word;
         /* Ensure extremely long words break */
@@ -355,29 +355,29 @@
     }
 
     .hero-description {
-        font-size: 1rem;
+        font-size: 1.1rem;
         line-height: 1.5;
         max-width: 100%;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
         /* Space before button */
     }
 
     .hero-cta-button {
         width: 100%;
         justify-content: space-between;
-        padding: 0.9rem 1.25rem;
+        padding: 1rem 1.5rem;
         margin-top: 1rem;
         /* Additional breathing room */
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .hero-social-proof {
-        margin-top: 3rem;
+        margin-top: 4rem;
         /* Push trusted by down */
     }
 
     .hero-visual-section {
-        min-height: 300px;
+        min-height: 350px;
         margin-bottom: 2rem;
         width: 100%;
         position: relative;
@@ -389,16 +389,16 @@
     }
 
     .vertical-card {
-        width: 80%;
-        height: 280px;
+        width: 90%;
+        height: 320px;
         right: 1rem;
         /* Pull back in */
         border-top-left-radius: 40px;
     }
 
     .horizontal-card {
-        width: 50%;
-        max-width: 160px;
+        width: 60%;
+        max-width: 200px;
         left: 1rem;
         /* Push in */
         bottom: 0;
