@@ -4,6 +4,7 @@ import About from './pages/About';
 import Talents from './pages/Talents';
 import Cases from './pages/Cases';
 import LetsEngage from './pages/LetsEngage';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <LetsEngage />
         </section>
       </main>
+      <Footer />
     </div>
   );
 }

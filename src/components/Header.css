@@ -273,7 +273,8 @@
     }
 
     .logo {
-        height: 35px;
+        height: 55px;
+        padding-top: 5px
     }
 
     .nav {
